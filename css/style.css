@@ -1,0 +1,119 @@
+a {
+  text-decoration: none;
+}
+
+#header {
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+}
+#header .top-header {
+  border-bottom: 1px solid grey;
+}
+#header .top-header ul li a {
+  padding: 15px 20px;
+  display: inline-block;
+  color: orange;
+}
+#header .top-header ul li.multi {
+  position: relative;
+}
+#header .top-header ul li.multi:hover ul {
+  opacity: 1;
+  visibility: visible;
+}
+#header .top-header ul li.multi ul {
+  position: absolute;
+  top: 100%;
+  transition: 0.5s ease-in-out;
+  width: 70px;
+  min-height: 150px;
+  background-color: orange;
+  opacity: 0;
+  visibility: hidden;
+  border-bottom: 2px solid black;
+}
+#header .top-header ul li.multi ul li a {
+  color: white;
+  padding: 8px 15px;
+  display: inline-block;
+}
+#header .top-header ul li.multi ul li a:hover {
+  color: black;
+}
+#header .bottom-header {
+  position: relative;
+}
+#header .bottom-header .logo {
+  width: 15%;
+}
+#header .bottom-header ul {
+  width: 85%;
+}
+#header .bottom-header ul li a {
+  color: white;
+  padding: 20px 20px;
+  display: inline-block;
+}
+#header .bottom-header ul li.icons:hover .big-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+#header .bottom-header ul li.icons .big-menu {
+  transition: 0.5s ease-in-out;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  transform: translateY(-25px);
+  opacity: 0;
+  visibility: hidden;
+}
+#header .bottom-header ul li.icons .big-menu .box-left {
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.792);
+  color: white;
+}
+#header .bottom-header ul li.icons .big-menu .box-left a {
+  color: white;
+}
+#header .bottom-header ul li.icons .big-menu .box-left p {
+  width: 70%;
+  margin: auto;
+}
+#header .bottom-header ul li.icons .big-menu .box-right {
+  height: 100%;
+  background-color: orange;
+  color: white;
+}
+#header .bottom-header ul li.icons .big-menu .box-right .right-text {
+  padding: 20px;
+}
+
+#secOne {
+  position: relative;
+}
+#secOne .box .box-img {
+  position: relative;
+}
+#secOne .box .box-img img {
+  filter: grayscale(0.5);
+}
+#secOne .box .box-img .box-text {
+  position: absolute;
+  bottom: 50px;
+  left: 50px;
+  color: white;
+}
+
+.section-2 {
+  width: 100%;
+  height: 100vh;
+  z-index: 10;
+}
+.section-2 .boxes {
+  position: relative;
+}
+.section-2 p {
+  color: blue;
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,107 @@
+a {
+  text-decoration: none;
+}
+
+#header {
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+  .top-header {
+    border-bottom: 1px solid grey;
+    ul {
+      li {
+        a {
+          padding: 15px 20px;
+          display: inline-block;
+          color: orange;
+        }
+        &.multi {
+          &:hover {
+            ul {
+              opacity: 1;
+              visibility: visible;
+            }
+          }
+          position: relative;
+          ul {
+            position: absolute;
+            top: 100%;
+            transition: 0.5s ease-in-out;
+            width: 70px;
+            min-height: 150px;
+            background-color: orange;
+            opacity: 0;
+            visibility: hidden;
+            border-bottom: 2px solid black;
+            li {
+              a {
+                color: white;
+                padding: 8px 15px;
+                display: inline-block;
+                &:hover {
+                  color: black;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  //   top-header finished
+  // =========
+  .bottom-header {
+    position: relative;
+    .logo {
+      width: 15%;
+    }
+    ul {
+      width: 85%;
+      li {
+        a {
+          color: white;
+          padding: 20px 20px;
+          display: inline-block;
+        }
+        &.icons {
+            &:hover{
+                .big-menu{
+                    opacity: 1;
+                    visibility: visible;
+                    transform: translateY(0);
+                }
+            }
+          .big-menu {
+            transition: 0.5s ease-in-out;
+            position: absolute;
+            left: 0;
+            top: 100%;
+            transform: translateY(-25px);
+            opacity: 0;
+            visibility: hidden;
+            .box-left {
+              text-align: center;
+              background-color: rgba(0, 0, 0, 0.792);
+              a {
+                color: white;
+              }
+              color: white;
+              p {
+                width: 70%;
+                margin: auto;
+              }
+            }
+            .box-right {
+                height: 100%;
+              background-color: orange;
+              color: white;
+              .right-text {
+                padding: 20px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
