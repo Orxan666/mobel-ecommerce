@@ -1,25 +1,48 @@
+console.log(products);
+let productCard = document.querySelector("#pro");
+
+products.map((item) => {
+  productCard.innerHTML += `
+  <div class="col-lg-4">
+<img class="img-fluid" src="${item.imgUrl}"/>
+      <h1>${item.price}</h1>
+      <p>${item.description}</p>
+      <h4>${item.category}</h4>
+   
+  </div>
+  
+  
+  
+  `;
+});
+
 $(".box").slick({
   dots: true,
-  infinite: false,
   speed: 300,
   slidesToShow: 1,
   slidesToScroll: 1,
   infinite: true,
+  autoplay: true,
+  autoplaySpeed: 2000,
   responsive: [
     {
       breakpoint: 1024,
       settings: {
-        slidesToShow: 2,
+        slidesToShow: 1,
         slidesToScroll: 3,
         infinite: true,
         dots: true,
+        autoplay: true,
+        autoplaySpeed: 2000,
       },
     },
     {
       breakpoint: 600,
       settings: {
-        slidesToShow: 2,
+        slidesToShow: 1,
         slidesToScroll: 2,
+        autoplay: true,
+        autoplaySpeed: 2000,
       },
     },
     {
@@ -27,6 +50,50 @@ $(".box").slick({
       settings: {
         slidesToShow: 1,
         slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 2000,
+      },
+    },
+  ],
+});
+// -----------------
+$(".mebel-slider").slick({
+  dots: false,
+  speed: 300,
+  slidesToShow: 4,
+  slidesToScroll: 1,
+  infinite: true,
+  autoplay: true,
+  autoplaySpeed: 2000,
+  arrows: false,
+  responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 3,
+        infinite: true,
+        dots: true,
+        autoplay: true,
+        autoplaySpeed: 2000,
+      },
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 2,
+        autoplay: true,
+        autoplaySpeed: 2000,
+      },
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 2000,
       },
     },
   ],
@@ -90,7 +157,6 @@ setInterval(() => {
     day_night = "PM";
     hours = hours - 12;
     hours = "0" + hours;
-
   }
   if (minutes < 10) {
     minutes = "0" + minutes;
@@ -98,5 +164,5 @@ setInterval(() => {
   if (seconds < 10) {
     seconds = "0" + seconds;
   }
-  time.textContent = hours + ":" + minutes+":"+seconds+day_night;
+  time.textContent = hours + ":" + minutes + ":" + seconds + day_night;
 }, 1000);
